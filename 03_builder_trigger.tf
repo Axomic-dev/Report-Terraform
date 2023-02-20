@@ -58,6 +58,8 @@ resource "google_cloudbuild_trigger" "builder-us-central1" {
         "--set-env-vars",
         "GCP_PROJECT=${var.GCP_PROJECT}",
         "--set-env-vars",
+        "API_URL=${var.API_URL}",
+        "--set-env-vars",
         "BUILDER_COLLECTION_NAME=${var.REPORT_COLLECTION_NAME}"
       ]
     }

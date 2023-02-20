@@ -1,9 +1,7 @@
 variable "GCP_PROJECT" {}
 variable "NODE_ENV" {}
 variable "API_KEY" {}
-variable "GCP_BUCKET" {
-  description = "Name for the bucket, must be unique on gcloud"
-}
+variable "API_URL" {}
 variable "CRYPTO_SECRET_KEY" {
   description = "String that serves as a key to hash values"
 }

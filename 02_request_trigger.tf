@@ -60,6 +60,8 @@ resource "google_cloudbuild_trigger" "request-us-central1" {
         "--set-env-vars",
         "GCP_SUBSCRIPTION=${var.RTOB_TOPIC}",
         "--set-env-vars",
+        "API_URL=${var.API_URL}",
+        "--set-env-vars",
         "API_KEY=${var.API_KEY}"
       ]
     }
