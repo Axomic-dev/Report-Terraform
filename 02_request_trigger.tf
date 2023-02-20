@@ -44,7 +44,7 @@ resource "google_cloudbuild_trigger" "request-us-central1" {
       wait_for = ["copy-package"]
       name     = "gcr.io/cloud-builders/gcloud"
       args = [
-        "function",
+        "functions",
         "deploy",
         "${var.REPORT_REQUEST}",
         "--region=${var.REGION1}",
