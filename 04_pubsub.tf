@@ -10,7 +10,7 @@ resource "google_pubsub_subscription" "mtor-subscriber" {
   name  = "mtor-subscriptor"
   topic = google_pubsub_topic.mtor.name
 
-  ack_deadline_seconds       = 20
+  ack_deadline_seconds       = 60
   message_retention_duration = "1200s"
   retain_acked_messages      = false
   enable_message_ordering    = false
@@ -29,7 +29,7 @@ resource "google_pubsub_subscription" "rtob-subscriber" {
   name  = "rtob-subscriptor"
   topic = google_pubsub_topic.rtob.name
 
-  ack_deadline_seconds       = 20
+  ack_deadline_seconds       = 60
   message_retention_duration = "1200s"
   retain_acked_messages      = false
   enable_message_ordering    = false
