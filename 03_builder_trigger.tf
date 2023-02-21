@@ -49,7 +49,7 @@ resource "google_cloudbuild_trigger" "builder-us-central1" {
         "${var.REPORT_BUILDER}",
         "--region=${var.REGION1}",
         "--source=${var.PROJECT_SRC}",
-        "--memory=256",
+        "--memory=512",
         "--trigger-http",
         "--runtime=nodejs16",
         "--entry-point=messageHandler",
