@@ -50,6 +50,8 @@ resource "google_cloudbuild_trigger" "manager-us-central1" {
         "--set-env-vars",
         "CRYPTO_SECRET_KEY=${var.CRYPTO_SECRET_KEY}",
         "--set-env-vars",
+        "PRIVATE_KEY=${var.PRIVATE_KEY}",
+        "--set-env-vars",
         "MANAGER_COLLECTION_NAME=${var.REPORT_COLLECTION_NAME}"
       ]
     }
