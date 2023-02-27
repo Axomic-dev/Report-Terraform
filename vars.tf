@@ -5,6 +5,10 @@ variable "API_URL" {}
 variable "CRYPTO_SECRET_KEY" {
   description = "String that serves as a key to hash values"
 }
+variable "REPO_OWNER" {
+  default     = "TeamAxomic"
+  description = "Name of the organization that owns the GitHub repos"
+}
 variable "BRANCH_NAME" {
   default     = "main"
   description = "Name for the production branch of the GitHub repo"

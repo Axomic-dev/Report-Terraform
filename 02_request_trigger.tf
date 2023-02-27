@@ -3,7 +3,7 @@ resource "google_cloudbuild_trigger" "request-us-central1" {
   disabled = false
 
   github {
-    owner = "TeamAxomic"
+    owner = var.REPO_OWNER
     name  = "Report-Request"
     push {
       branch = "^${var.BRANCH_NAME}$"
